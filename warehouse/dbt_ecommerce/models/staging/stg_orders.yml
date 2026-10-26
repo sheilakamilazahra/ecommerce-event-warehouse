@@ -1,0 +1,36 @@
+
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Model staging transaksi yang sudah distandarisasi."
+    columns:
+      - name: order_id
+        description: "ID order yang unik."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        data_tests:
+          - not_null
+
+      - name: order_ts
+        data_tests:
+          - not_null
+
+      - name: quantity
+        data_tests:
+          - not_null
+
+      - name: unit_price
+        data_tests:
+          - not_null
+
+      - name: discount_pct
+        data_tests:
+          - not_null
+
+      - name: status
+        data_tests:
+          - not_null

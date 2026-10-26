@@ -1,0 +1,29 @@
+
+version: 2
+
+sources:
+  - name: ecommerce_source
+    description: "Data transaksi yang sudah lolos validasi Pydantic."
+    schema: main
+    tables:
+      - name: raw_orders
+        description: "Tabel sumber transaksi dari file Parquet."
+        columns:
+          - name: order_id
+            description: "ID unik setiap order."
+          - name: customer_id
+            description: "ID pelanggan."
+          - name: order_ts
+            description: "Waktu transaksi."
+          - name: product_category
+            description: "Kategori produk."
+          - name: quantity
+            description: "Jumlah produk yang dibeli."
+          - name: unit_price
+            description: "Harga satuan produk."
+          - name: discount_pct
+            description: "Persentase diskon dalam rentang 0 sampai 1."
+          - name: payment_method
+            description: "Metode pembayaran."
+          - name: status
+            description: "Status transaksi."

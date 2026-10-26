@@ -1,0 +1,28 @@
+﻿# Python virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# DuckDB local database
+*.duckdb
+*.duckdb.wal
+
+# dbt generated artifacts
+warehouse/dbt_ecommerce/target/
+warehouse/dbt_ecommerce/logs/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
